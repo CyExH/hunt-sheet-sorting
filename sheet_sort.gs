@@ -66,10 +66,10 @@ function onEdit(e) {
     newSheet.showSheet(); 
     newSheet.setTabColor(null); // 确保新表没有颜色
 
-    // 【新增需求】：将输入的题目名称填入新表的 B1
+    // 将输入的题目名称填入新表的 B1
     newSheet.getRange(CELL_TITLE).setValue(newName);
 
-    // 【新增需求】：如果是 Meta，将 Overview 中同行的 C列 (Round) 填入 B4
+    // 如果是 Meta，将 Overview 中同行的 C列 (Round) 填入 B4
     if (isMeta) {
       var roundName = overviewSheet.getRange(row, COL_ROUND).getValue();
       newSheet.getRange(CELL_ROUND).setValue(roundName);
